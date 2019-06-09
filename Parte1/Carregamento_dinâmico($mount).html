@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="carregar()">Chamar Mudança</button>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      function carregar() {
+        app.$mount("#app");
+      }
+      const app = new Vue({
+        data: {
+          nome: "Olá Mundo!"
+        },
+        template: "<h1>{{ nome }}</h1>"
+      });
+    </script>
+  </body>
+</html>

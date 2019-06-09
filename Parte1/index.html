@@ -8,7 +8,13 @@
   </head>
   <body>
     <div id="app">
-      {{ msg }}
+      <p>{{ msg }}</p>
+      <p>{{ ehVerdade ? "Verdade" : "Falso" }}</p>
+      <p>{{ frutas[0] + " e " + frutas[1] }} e {{ frutas[2] }}</p>
+      <p>Aluno: {{ aluno.nome }}</p>
+      <p>{{ 1 + num1 }}</p>
+      <p>{{ fun() }}</p>
+      <p>{{ metodo() }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -16,7 +22,19 @@
       new Vue({
         el: "#app",
         data: {
-          msg: "Teste Mensagem"
+          msg: "Teste Mensagem",
+          ehVerdade: true,
+          frutas: ["Pera", "Uva", "Maça"],
+          aluno: { nome: "Henrique" },
+          num1: 1,
+          fun: () => {
+            return "Corpo da funcao";
+          }
+        },
+        methods: {
+          metodo() {
+            return "Frutas: " + this.frutas;
+          }
         }
       });
     </script>
