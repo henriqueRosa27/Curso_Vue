@@ -1,24 +1,72 @@
 {
+  "professores": [
+    {
+      "id": 1,
+      "nome": "Henrique"
+    },
+    {
+      "id": 2,
+      "nome": "Paula"
+    },
+    {
+      "id": 3,
+      "nome": "Luna"
+    }
+  ],
   "aluno": [
     {
       "id": 1,
       "nome": "Mariazinha",
-      "sobrenome": "da Silva"
+      "sobrenome": "da Silva",
+      "professor": {
+        "id": 1,
+        "nome": "Henrique"
+      }
     },
     {
       "id": 2,
       "nome": "Joãozinho",
-      "sobrenome": "Barros"
+      "sobrenome": "Barros",
+      "professor": {
+        "id": 1,
+        "nome": "Henrique"
+      }
     },
     {
       "id": 3,
       "nome": "Pedrinho",
-      "sobrenome": "Moura"
+      "sobrenome": "Moura",
+      "professor": {
+        "id": 1,
+        "nome": "Henrique"
+      }
     },
     {
       "nome": "Xuxu Beleza",
       "sobrenome": "",
-      "id": 4
+      "id": 4,
+      "professor": {
+        "id": 1,
+        "nome": "Henrique"
+      }
+    },
+    {
+      "nome": "Alguem",
+      "sobrenome": "",
+      "professor": {
+        "id": 2,
+        "nome": "Paula"
+      },
+      "id": 5
+    },
+    {
+      "nome": "Preguiça",
+      "sobrenome": "",
+      "professor": {
+        "id": 3,
+        "nome": "Luna"
+      },
+      "id": 6
     }
   ]
 }

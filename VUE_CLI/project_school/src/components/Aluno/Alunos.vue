@@ -1,8 +1,10 @@
 <template>
   <div>
-    <titulo texto="Aluno"/>
-    <input type="text" placeholder="Nome do Aluno" v-model="nome" v-on:keyup.enter="AddAluno()">
-    <button class="btn btn-input" @click="AddAluno()">Adicionar Aluno</button>
+    <titulo :texto="professorId != undefined ? 'Professor: ' + professor.nome : 'Todos Alunos'"/>
+    <div v-if="professorId != undefined">
+      <input type="text" placeholder="Nome do Aluno" v-model="nome" v-on:keyup.enter="AddAluno()">
+      <button class="btn btn-input" @click="AddAluno()">Adicionar Aluno</button>
+    </div>
     <table>
       <thead>
         <th>Mat.</th>
@@ -13,7 +15,11 @@
         <tr v-for="( aluno, index) in alunos" :key="index">
           <!-- <td>{{index + 1}}</td> -->
           <td>{{aluno.id}}</td>
-          <td>{{aluno.nome}} {{aluno.sobrenome}}</td>
+          <router-link
+            :to="`/alunoDetalhe/${aluno.id}`"
+            tag="td"
+            style="cursor: pointer"
+          >{{aluno.nome}} {{aluno.sobrenome}}</router-link>
           <td>
             <button class="btn btn-danger" @click="Remover(aluno)">Remover</button>
           </td>
@@ -35,25 +41,36 @@ export default {
   data() {
     return {
       titulo: "Aluno",
+      professorId: this.$route.params.prof_id,
       nome: "",
-      alunos: []
-      /*alunos: [
-        
-      ]*/
+      alunos: [],
+      professor: {}
     };
   },
   created() {
-    this.$http
-      .get("http://localhost:3000/aluno")
-      .then(res => res.json())
-      .then(alunos => (this.alunos = alunos));
+    if (this.professorId) {
+      this.CarregarProfessores();
+      this.$http
+        .get("http://localhost:3000/aluno/?professor.id=" + this.professorId)
+        .then(res => res.json())
+        .then(alunos => (this.alunos = alunos));
+    } else {
+      this.$http
+        .get("http://localhost:3000/aluno")
+        .then(res => res.json())
+        .then(alunos => (this.alunos = alunos));
+    }
   },
   props: {},
   methods: {
     AddAluno() {
       let _aluno = {
         nome: this.nome,
-        sobrenome: ""
+        sobrenome: "",
+        professor: {
+          id: this.professor.id,
+          nome: this.professor.nome
+        }
       };
 
       this.$http
@@ -76,6 +93,14 @@ export default {
         let indice = this.alunos.indexOf(aluno);
         this.alunos.splice(indice, 1);
       });
+    },
+    CarregarProfessores() {
+      this.$http
+        .get("http://localhost:3000/professores/" + this.professorId)
+        .then(res => res.json())
+        .then(professor => {
+          this.professor = professor;
+        });
     }
   }
 };
@@ -84,6 +109,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 input {
+  width: calc(100% - 195px);
   border: 0;
   padding: 20px;
   font-size: 1.3em;
@@ -91,6 +117,7 @@ input {
   display: inline;
 }
 .btn-input {
+  width: 150px;
   border: 0;
   padding: 20px;
   font-size: 1.3em;
