@@ -43,9 +43,10 @@
       }
     },
     {
-      "nome": "Xuxu Beleza",
-      "sobrenome": "",
       "id": 4,
+      "nome": "Xuxu",
+      "sobrenome": "Beleza",
+      "dataNasc": "31/03/1804",
       "professor": {
         "id": 1,
         "nome": "Henrique"

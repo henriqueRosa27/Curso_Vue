@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_APi\\ProjecScholl_APi.csproj": {}
+    "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_api\\ProjecScholl_APi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_APi\\ProjecScholl_APi.csproj": {
+    "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_api\\ProjecScholl_APi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_APi\\ProjecScholl_APi.csproj",
+        "projectUniqueName": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_api\\ProjecScholl_APi.csproj",
         "projectName": "ProjecScholl_APi",
-        "projectPath": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_APi\\ProjecScholl_APi.csproj",
+        "projectPath": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_api\\ProjecScholl_APi.csproj",
         "packagesPath": "C:\\Users\\henrique.rosa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_APi\\obj\\",
+        "outputPath": "C:\\Users\\henrique.rosa\\Desktop\\vue\\VUE_CLI\\ProjecScholl_api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -51,6 +51,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.4, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
