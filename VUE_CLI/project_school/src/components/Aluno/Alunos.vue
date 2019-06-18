@@ -14,7 +14,7 @@
       <tbody v-if="alunos.length">
         <tr v-for="( aluno, index) in alunos" :key="index">
           <!-- <td>{{index + 1}}</td> -->
-          <td>{{aluno.id}}</td>
+          <td class="colPequeno">{{aluno.id}}</td>
           <router-link
             :to="`/alunoDetalhe/${aluno.id}`"
             tag="td"
