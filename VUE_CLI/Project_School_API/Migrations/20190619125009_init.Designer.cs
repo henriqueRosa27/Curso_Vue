@@ -9,7 +9,7 @@ using Project_School_API.Data;
 namespace Project_School_API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190619122902_init")]
+    [Migration("20190619125009_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,32 @@ namespace Project_School_API.Migrations
                     b.HasIndex("Professorid");
 
                     b.ToTable("Alunos");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            dataNasc = "01/01/2000",
+                            idProfessor = 1,
+                            nome = "Maria",
+                            sobrenome = "José"
+                        },
+                        new
+                        {
+                            id = 2,
+                            dataNasc = "20/01/1990",
+                            idProfessor = 2,
+                            nome = "João",
+                            sobrenome = "Paulo"
+                        },
+                        new
+                        {
+                            id = 3,
+                            dataNasc = "25/06/1981",
+                            idProfessor = 3,
+                            nome = "Alex",
+                            sobrenome = "Ferraz"
+                        });
                 });
 
             modelBuilder.Entity("Project_School_API.Models.Professor", b =>
@@ -50,6 +76,23 @@ namespace Project_School_API.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Professores");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            nome = "Henrique"
+                        },
+                        new
+                        {
+                            id = 2,
+                            nome = "Paula"
+                        },
+                        new
+                        {
+                            id = 3,
+                            nome = "Luna"
+                        });
                 });
 
             modelBuilder.Entity("Project_School_API.Models.Aluno", b =>
