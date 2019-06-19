@@ -1,0 +1,14 @@
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\bin\Debug\netcoreapp2.2\Project_School_API.deps.json
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\bin\Debug\netcoreapp2.2\Project_School_API.runtimeconfig.json
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\bin\Debug\netcoreapp2.2\Project_School_API.runtimeconfig.dev.json
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\bin\Debug\netcoreapp2.2\Project_School_API.dll
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\bin\Debug\netcoreapp2.2\Project_School_API.pdb
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.csprojAssemblyReference.cache
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.csproj.CoreCompileInputs.cache
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.RazorAssemblyInfo.cache
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.RazorAssemblyInfo.cs
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.AssemblyInfoInputs.cache
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.AssemblyInfo.cs
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.RazorTargetAssemblyInfo.cache
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.dll
+C:\Users\henrique.rosa\Desktop\vue\VUE_CLI\Project_School_API\obj\Debug\netcoreapp2.2\Project_School_API.pdb
