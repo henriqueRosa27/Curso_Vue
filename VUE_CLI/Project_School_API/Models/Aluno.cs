@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Project_School_API.Models
 {
     public class Aluno
@@ -12,6 +14,7 @@ namespace Project_School_API.Models
 
         public int idProfessor { get; set; }
 
+        [ForeignKey("idProfessor")]
         public Professor Professor { get; set; }
     }
 }
