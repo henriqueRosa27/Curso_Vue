@@ -26,7 +26,13 @@
         </tr>
       </tbody>
       <!-- <tfoot v-if="!alunos.length">Nenhum Aluno encontrado</tfoot> -->
-      <tfoot v-else>Nenhum Aluno encontrado</tfoot>
+      <tfoot v-else>
+        <tr>
+          <td colspan="3" style="text-align: center">
+            <h5>Nenhum Professor encontrado</h5>
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>
@@ -51,12 +57,12 @@ export default {
     if (this.professorId) {
       this.CarregarProfessores();
       this.$http
-        .get("http://localhost:3000/aluno/?professor.id=" + this.professorId)
+        .get("http://localhost:5000/api/Aluno/ByProfessor/" + this.professorId)
         .then(res => res.json())
         .then(alunos => (this.alunos = alunos));
     } else {
       this.$http
-        .get("http://localhost:3000/aluno")
+        .get("http://localhost:5000/api/aluno")
         .then(res => res.json())
         .then(alunos => (this.alunos = alunos));
     }
@@ -67,14 +73,12 @@ export default {
       let _aluno = {
         nome: this.nome,
         sobrenome: "",
-        professor: {
-          id: this.professor.id,
-          nome: this.professor.nome
-        }
+        dataNasc: "",
+        idProfessor: this.professor.id
       };
 
       this.$http
-        .post("http://localhost:3000/aluno", _aluno)
+        .post("http://localhost:5000/api/aluno", _aluno)
         .then(res => res.json())
         .then(aluno => {
           this.alunos.push(aluno);
@@ -89,14 +93,14 @@ export default {
       //this.nome = "";
     },
     Remover(aluno) {
-      this.$http.delete(`http://localhost:3000/aluno/${aluno.id}`).then(() => {
+      this.$http.delete(`http://localhost:5000/api/aluno/${aluno.id}`).then(() => {
         let indice = this.alunos.indexOf(aluno);
         this.alunos.splice(indice, 1);
       });
     },
     CarregarProfessores() {
       this.$http
-        .get("http://localhost:3000/professores/" + this.professorId)
+        .get("http://localhost:5000/api/professor/" + this.professorId)
         .then(res => res.json())
         .then(professor => {
           this.professor = professor;
